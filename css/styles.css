@@ -23,39 +23,45 @@
 	Loader
 \*------------------------------------*/
 
-.loader {
-    width: 48px;
-    height: 48px;
+.loader__container {
+    z-index: 1000;
+    position: fixed;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    animation: fadeout 0.2s 3s forwards;
+  }
+  .loader__container .loader{
+    border: 16px solid var(--grey);
+    border-top: 16px solid var(--blue);
     border-radius: 50%;
-    position: relative;
-    animation: rotate 1s linear infinite
-  }
-  .loader::before , .loader::after {
-    content: "";
-    box-sizing: border-box;
-    position: absolute;
-    inset: 0px;
-    border-radius: 50%;
-    border: 5px solid #FFF;
-    animation: prixClipFix 2s linear infinite ;
-  }
-  .loader::after{
-    inset: 8px;
-    transform: rotate3d(90, 90, 0, 180deg );
-    border-color: var(--blue);
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
   }
 
-  @keyframes rotate {
-    0%   {transform: rotate(0deg)}
-    100%   {transform: rotate(360deg)}
+  @keyframes fadeout {
+    0% {
+      opacity: 100%;
+    }
+    100% {
+      opacity: 0%;
+      visibility: hidden;
+    }
   }
-
-  @keyframes prixClipFix {
-      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
-      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
-      75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
-
 /*------------------------------------*\
 	General
 \*------------------------------------*/
