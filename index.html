@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test d'Intégrateur Designer Web</title>
 
-    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
     <div class="bloc_page">
@@ -18,23 +22,70 @@
                     <a href="./" class="header__logo"> <img src="images/logo/Booki.png" alt="logo"> </a>
                     <nav class="header__nav">
                         <ul class="header__nav__list">
-                            <li class="header__nav__list__item"><a class="header__nav__list__item__link" href="#hebergement">hébergement</a></li>
-                            <li class="header__nav__list__item"><a class="header__nav__list__item__link" href="#activite">Activité</a></li>
+                            <li class="header__nav__list__item"><a class="header__nav__list__item__link"
+                                    href="#hebergement">hébergement</a></li>
+                            <li class="header__nav__list__item"><a class="header__nav__list__item__link"
+                                    href="#activite">Activité</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
 
-        <main>
-            
+        <main class="main">
+            <div class="container">
+                <section class="main__top">
+                    <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+                    <p>En plein centre ville ou en pleine nature</p>
+                    <form class="form" action="#">
+                        <span class="form__marker"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+                        <input class="form__search" type="search" name="search" placeholder="Marseille, France">
+                        <button class="form__button" name="button">
+                            <span class="form__button__texte">Rechercher</span>
+                            <span class="form__button__icone"><i class="fas fa-search"></i></span>
+                        </button>
+                    </form>
+                    <div class="filter">
+                        <span class="filter__title">Filtres</span>
+                        <ul class="filter__list">
+                            <li class="filter__list__item">
+                                <span class="filter__list__item__icone"><i class="fas fa-money-bill-wave"
+                                        aria-hidden="true"></i></span>
+                                <span class="filter__list__item__label">Économique</span>
+                            </li>
+                            <li class="filter__list__item">
+                                <span class="filter__list__item__icone"><i class="fas fa-child"
+                                        aria-hidden="true"></i></span>
+                                <span class="filter__list__item__label">Famillial</span>
+                            </li>
+                            <li class="filter__list__item">
+                                <span class="filter__list__item__icone"><i class="fas fa-heart"
+                                        aria-hidden="true"></i></span>
+                                <span class="filter__list__item__label">Romantique</span>
+                            </li>
+                            <li class="filter__list__item">
+                                <span class="filter__list__item__icone"><i class="fas fa-dog"
+                                        aria-hidden="true"></i></span>
+                                <span class="filter__list__item__label">Animaux autorisés</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="info">
+                        <span class="info__icone">
+                            <i class="fas fa-info" aria-hidden="true"></i>
+                        </span>
+                        <span class="info__texte">Plus de 500 logements sont disponibles dans cette ville</span>
+                    </div>
+                </section>
+            </div>
         </main>
 
         <footer>
 
         </footer>
     </div>
-    
+
     <script src="js/script.js"></script>
 </body>
+
 </html>
