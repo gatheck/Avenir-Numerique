@@ -59,3 +59,42 @@ a{
     text-decoration: none;
     outline: none !important;
 }
+
+/*------------------------------------*\
+	General
+\*------------------------------------*/
+
+
+.header__contend
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header__nav
+{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header__nav__list{
+    display: flex;
+}
+
+.header__nav__list__item__link{
+    padding: 45px 20px;
+    border-top: 2px solid#fff;
+    display: block;
+}
+
+.header__nav__list__item__link:hover,
+.header__nav__list__item__link:active{
+    border-top-color: #0065fc;
+    color: #0065fc;
+}
+
+.header__logo{ 
+    display: block;
+}
