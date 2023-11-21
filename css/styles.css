@@ -20,6 +20,43 @@
 }
 
 /*------------------------------------*\
+	Loader
+\*------------------------------------*/
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1s linear infinite
+  }
+  .loader::before , .loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid #FFF;
+    animation: prixClipFix 2s linear infinite ;
+  }
+  .loader::after{
+    inset: 8px;
+    transform: rotate3d(90, 90, 0, 180deg );
+    border-color: var(--blue);
+  }
+
+  @keyframes rotate {
+    0%   {transform: rotate(0deg)}
+    100%   {transform: rotate(360deg)}
+  }
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      75%, 100%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+  }
+
+/*------------------------------------*\
 	General
 \*------------------------------------*/
 
@@ -497,10 +534,16 @@ a{
 
     .header {
         margin-bottom: 30px;
+        padding-top: 10px;
+    }
+
+    .header .container{
+        padding-left: 0;
+        padding-right: 0px;
     }
 
     .header__contend{
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .header__nav{
@@ -525,85 +568,75 @@ a{
         text-align: center;
     }
 
-    header nav ul li a:hover,
-    header nav ul li a:active{
+    .header__nav__list__item__link:hover,
+    .header__nav__list__item__link:active{
         border-bottom-color: #0065fc;
         color: #0065fc;
     }
 
-    header .inscrire {
-        margin-left: 0;
-        padding: 40px 5px;
-    }
-
-    .search_filtre h1 {
+    h1 {
         margin-bottom: 10px;
     }
 
-    .search_filtre form {
+    .form{
         margin: 30px 0px;
     }
 
-    .block_filter {
+    .filter{
         align-items: flex-start;
         flex-direction: column;
         margin-bottom: 20px;
     }
 
-    .block_filter .title_filter {
+    .filter__title{
         margin-right: 0px;
         margin-bottom: 15px;
     }
 
-    .block_filter ul li {
+    .filter__list__item{
         margin-right: 10px;
         margin-bottom: 10px;
     }
 
-    .block_filter ul li:nth-child(3){
-        width: 100%;
-    }
-
-    .bloc_hebergement ul li {
+    .hebergement__list__item{
         width: 100%;
         margin-bottom: 10px;
     }
 
-    .activity_items {
+    .activite__marseille__items {
         width: 100%;
     }
 
-    .activity_items.bloc_double .bloc_double_top{
+    .bloc__double__top{
         margin-bottom: 20px;
     }
 
-    footer {
+    .footer {
         padding-bottom: 0px;
     }
 
-    .footer-contend {
+    .footer__contend{
         flex-direction: column;
     }
 
-    .footer-items {
+    .footer__contend__items{
         width: 100%;
         margin-bottom: 40px;
     }
 
-    .search_filtre .button_search .icone_search{
+    .form__button__icone{
         display: block;
     }
 
-    .search_filtre .button_search .label_search{
+    .form__button__texte{
         display: none;
     }
 
-    header nav{
-        margin-left: -15px;
-        margin-right: -15px
+    .header__nav{
+        margin-top: 20px;
     }
 
-    .herbergement_populaire_contend {
+    .main__middle__contend{
         margin-left: -15px;
         margin-right: -15px;
     }
