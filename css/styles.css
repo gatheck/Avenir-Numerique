@@ -1,3 +1,24 @@
+/* ***********************************************************************************************
+		Font
+*********************************************************************************************** */
+
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('fonts/raleway/raleway-regular/raleway-regular-webfont.woff2') format('woff2'),
+         url('fonts/raleway/raleway-regular/raleway-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('fonts/raleway/raleway-bold/raleway-bold-webfont.woff2') format('woff2'),
+         url('fonts/raleway/raleway-bold/raleway-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /*------------------------------------*\
 	General
 \*------------------------------------*/
@@ -7,6 +28,7 @@ html {
 }
 
 body {
+    font-family: 'Raleway', sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
     background-color: #fff;
@@ -30,4 +52,10 @@ img {
 
 * {
     box-sizing: border-box;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+    outline: none !important;
 }
