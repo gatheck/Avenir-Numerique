@@ -166,6 +166,114 @@ a{
 .header__logo__img{ 
     width: 62px;
 }
+
+header .header__popup__register{
+    padding-top: 47px;
+    padding-bottom: 45px;
+    margin-left: 40px;
+    font-family: 'ralewaybold';
+}
+
+
+/*------------------------------------*\
+	Modal
+\*------------------------------------*/
+
+.header__popup .popup {
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0px;
+    left:0px;
+    background:rgba(0,0,0,0.75);
+    /*visibility: hidden;*/
+    display: none;
+}
+ 
+.header__popup .popup-inner {
+    max-width: 400px;
+    width: 100%;
+    padding:40px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    box-shadow:0px 2px 6px rgba(0,0,0,1);
+    border-radius:3px;
+    background: var(--white);
+}
+ 
+.header__popup .popup-close {
+    width:30px;
+    height:30px;
+    padding-top:4px;
+    display:inline-block;
+    position:absolute;
+    top:0px;
+    right:0px;
+    transition:ease 0.25s all;
+    -webkit-transform:translate(50%, -50%);
+    transform:translate(50%, -50%);
+    border-radius:1000px;
+    background:rgba(0,0,0,0.8);
+    font-family:Arial, Sans-Serif;
+    font-size:20px;
+    text-align:center;
+    line-height:100%;
+    color: var(--white);
+}
+ 
+.header__popup .popup-close:hover {
+    -webkit-transform:translate(50%, -50%) rotate(180deg);
+    transform:translate(50%, -50%) rotate(180deg);
+    background:rgba(0,0,0,1);
+    text-decoration:none;
+}
+
+
+.header__popup form .form-group{
+    margin-bottom: 15px;
+}
+
+.header__popup form .form-group label{
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.header__popup form .form-group input{
+    padding: 3%;
+    background-color: var(--white);
+    border: 1px solid var(--grey);
+    font-size: 14px;
+    color: var(--black);
+    max-width: 300px;
+    width: 100%;
+}
+
+.header__popup form .form-group input:focus{
+    box-shadow: 0 0 5px var(--blue);
+    border: 1px solid var(--blue);
+}
+
+.header__popup form button{
+    padding: 14px 22px;
+    background: var(--blue);
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    color: var(--white);
+    outline: none;
+    font-size: 14px;
+    display: block;
+    border-radius: 0px;
+    font-weight: 700;
+    line-height: 100%;
+    margin: auto;
+    cursor: pointer;
+    border: none;
+}
+
 /*------------------------------------*\
 	Main
 \*------------------------------------*/
@@ -543,13 +651,8 @@ a{
         padding-top: 10px;
     }
 
-    .header .container{
-        padding-left: 0;
-        padding-right: 0px;
-    }
-
     .header__contend{
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .header__nav{
@@ -557,6 +660,9 @@ a{
         justify-content: space-between;
         order: 2;
         width: 100%;
+        margin-top: 20px;
+        margin-left: -15px;
+        margin-right: -15px;
     }
 
     .header__nav__list{
@@ -636,10 +742,6 @@ a{
 
     .form__button__texte{
         display: none;
-    }
-
-    .header__nav{
-        margin-top: 20px;
     }
 
     .main__middle__contend{

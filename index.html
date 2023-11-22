@@ -31,6 +31,25 @@
                                     href="#activite">Activité</a></li>
                         </ul>
                     </nav>
+
+
+                    <div class="header__popup">
+                        <a class="header__popup__register" onclick='overlay()' href="#">S'inscrire</a>
+                 
+                        <div class="popup" id="popup">
+                            <div class="popup-inner">
+                                <form action="#">
+                                  <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" placeholder="Entrez votre email" class="form-control" id="email">
+                                  </div>
+                                  <button type="submit" class="btn btn-primary">Envoyer</button>
+                                </form>
+                                <a class="popup-close" href="javascript:close()">x</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </header>
